@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CRUD_SQL.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CRUD_SQL.Context
 {
@@ -8,5 +9,7 @@ namespace CRUD_SQL.Context
         {
 
         }
+
+        public DbSet<Pessoa> Pessoas { get; set; }
     }
 }
