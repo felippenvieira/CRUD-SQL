@@ -23,14 +23,14 @@ namespace CRUD_SQL.Controllers
             return Ok(_context.Pessoas.ToList());
         }
 
-        [HttpGet()]
-        public IActionResult GetName([FromBody] Pessoa pessoa)
+        [HttpGet("pessoa")]
+        public IActionResult GetName([FromQuery] string pessoa)
         {
-            var pessoas = _context.Pessoas.Find(pessoa.Name);
+            var pessoas = _context.Pessoas.Where(x => x.Name.Contains(pessoa));
             return Ok(pessoas);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{Id}")]
         public IActionResult GetById([FromRoute] Guid Id)
         {
             var pessoa = _context.Pessoas.Find(Id);
