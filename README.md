@@ -18,7 +18,7 @@ First of all, i've created a Person Model with the following attributes:
 As a second step, MyContext was created to create the Pessoas DB. 
 
 ### 3 -
-For the third step, the Pessoas Controller was created to include the HTTP Get, GetName, GetById, Post, Put and Delete.
+For the third step, i injected MyContext in the Pessoas Controller and included the HTTP Get, GetName, GetById, Post, Put and Delete.
 
 ### 4 -
 This step was used to create de database using SQL-Server using add-migration and update-database;
